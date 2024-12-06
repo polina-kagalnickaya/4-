@@ -1,0 +1,16 @@
+def count_t_excluding_start(input_string):
+    count = 0
+    length = len(input_string)
+
+    for i in range(length):
+        if input_string[i] == 't':
+            if i > 0 and input_string[i-1] != ' ':
+                count += 1
+
+    return count
+
+input_string = input("text: ")
+
+result = count_t_excluding_start(input_string)
+
+print(f"amt t: {result}")
